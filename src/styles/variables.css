@@ -1,0 +1,80 @@
+/* Modern SaaS Design Tokens & Variables for CampusCompass */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Fonts */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Colors - Light Neutral Base & Slate Grays */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  
+  --border-light: #e2e8f0;
+  --border-focus: #cbd5e1;
+
+  --neutral-50: #f8fafc;
+  --neutral-100: #f1f5f9;
+  --neutral-200: #e2e8f0;
+  --neutral-300: #cbd5e1;
+  --neutral-400: #94a3b8;
+  --neutral-500: #64748b;
+  --neutral-600: #475569;
+  --neutral-700: #334155;
+  --neutral-800: #1e293b;
+  --neutral-900: #0f172a;
+
+  /* Primary Accents - Deep Blue + Indigo + Subtle Gradients */
+  --primary: #4f46e5;       /* Indigo 600 */
+  --primary-hover: #4338ca; /* Indigo 700 */
+  --primary-light: #e0e7ff; /* Indigo 100 */
+  --primary-glow: rgba(79, 70, 229, 0.15);
+
+  --secondary: #1e3a8a;     /* Deep Blue */
+  --secondary-hover: #1e40af;
+  --secondary-light: #dbeafe;
+
+  --accent-blue: #0284c7;   /* Light blue */
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #1e3a8a 0%, #4f46e5 100%);
+  --gradient-primary-hover: linear-gradient(135deg, #1d4ed8 0%, #4338ca 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.4) 100%);
+  --gradient-subtle: linear-gradient(to right, #f8fafc, #f1f5f9);
+
+  /* Semantic Colors */
+  --success: #0d9488;       /* Teal */
+  --success-light: #f0fdfa;
+  --success-border: #ccfbf1;
+  
+  --warning: #d97706;       /* Amber */
+  --warning-light: #fffbeb;
+  --warning-border: #fef3c7;
+  
+  --danger: #e11d48;        /* Rose */
+  --danger-light: #fff1f2;
+  --danger-border: #ffe4e6;
+
+  /* Shadows (SaaS soft shadows) */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.04), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  --shadow-premium: 0 12px 30px -10px rgba(79, 70, 229, 0.08), 0 4px 10px -4px rgba(30, 58, 138, 0.03);
+
+  /* Borders & Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  /* Header / Sidebar sizes */
+  --navbar-height: 72px;
+  --max-width-grid: 1200px;
+
+  /* Transitions */
+  --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: all 0.15s ease;
+}

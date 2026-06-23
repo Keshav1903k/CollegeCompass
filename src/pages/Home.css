@@ -1,0 +1,545 @@
+.home-page {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  padding: 100px 0 80px;
+  background: radial-gradient(100% 100% at 50% 0%, rgba(224, 231, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%), var(--bg-primary);
+  text-align: center;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-headline {
+  font-size: 52px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  color: var(--neutral-900);
+}
+
+.hero-headline span {
+  background: var(--gradient-primary);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: var(--neutral-600);
+  max-width: 600px;
+  margin: 0 auto 36px;
+}
+
+/* Search Bar in Hero */
+.search-container {
+  display: flex;
+  align-items: center;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: 8px 8px 8px 20px;
+  box-shadow: var(--shadow-lg);
+  max-width: 650px;
+  margin: 0 auto;
+  gap: 12px;
+  transition: var(--transition-smooth);
+}
+
+.search-container:focus-within {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px var(--primary-glow);
+}
+
+.search-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.search-icon-color {
+  color: var(--neutral-400);
+}
+
+.search-field {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 15px;
+  color: var(--neutral-800);
+}
+
+.search-field::placeholder {
+  color: var(--neutral-400);
+}
+
+/* Section Common Styles */
+.home-section {
+  padding: 80px 0;
+}
+
+.home-section-alt {
+  padding: 80px 0;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 48px;
+}
+
+.section-tag {
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.section-desc {
+  font-size: 16px;
+  color: var(--neutral-500);
+}
+
+/* Featured College Cards Grid */
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.college-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-banner {
+  position: relative;
+  height: 160px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-smooth);
+}
+
+.college-card:hover .card-banner img {
+  transform: scale(1.05);
+}
+
+.card-logo {
+  position: absolute;
+  bottom: -20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--bg-primary);
+  overflow: hidden;
+  background: var(--bg-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.card-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 32px 20px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.4;
+  color: var(--neutral-900);
+}
+
+.card-location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--neutral-500);
+  margin-bottom: 16px;
+}
+
+.card-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 12px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  margin-bottom: 16px;
+  border: 1px solid var(--neutral-100);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: var(--neutral-400);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.stat-val {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--neutral-800);
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+  border-top: 1px solid var(--border-light);
+  padding-top: 16px;
+}
+
+/* Streams Grid */
+.streams-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.stream-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.stream-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-premium);
+  border-color: rgba(79, 70, 229, 0.2);
+}
+
+.stream-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+/* Individual Stream Icon Backgrounds */
+.stream-card.engineering .stream-icon-wrapper {
+  background: rgba(79, 70, 229, 0.08); /* Indigo */
+}
+.stream-card.management .stream-icon-wrapper {
+  background: rgba(217, 119, 6, 0.08); /* Amber */
+}
+.stream-card.medical .stream-icon-wrapper {
+  background: rgba(13, 148, 136, 0.08); /* Teal */
+}
+.stream-card.law .stream-icon-wrapper {
+  background: rgba(107, 33, 168, 0.08); /* Purple/Lavender */
+}
+
+/* Hover effects for individual streams */
+.stream-card.engineering:hover .stream-icon-wrapper {
+  background: rgba(79, 70, 229, 0.16);
+  transform: scale(1.08);
+}
+.stream-card.management:hover .stream-icon-wrapper {
+  background: rgba(217, 119, 6, 0.16);
+  transform: scale(1.08);
+}
+.stream-card.medical:hover .stream-icon-wrapper {
+  background: rgba(13, 148, 136, 0.16);
+  transform: scale(1.08);
+}
+.stream-card.law:hover .stream-icon-wrapper {
+  background: rgba(107, 33, 168, 0.16);
+  transform: scale(1.08);
+}
+
+.stream-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  transition: var(--transition-smooth);
+}
+
+.stream-card:hover .stream-icon {
+  transform: scale(1.1);
+}
+
+.stream-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--neutral-900);
+}
+
+.stream-count {
+  font-size: 13px;
+  color: var(--neutral-400);
+  font-weight: 500;
+}
+
+/* Split CTA Section */
+.cta-split-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.cta-box {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: 48px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.cta-box-primary {
+  background: radial-gradient(100% 100% at 0% 0%, rgba(224, 231, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%), var(--bg-primary);
+  border-left: 5px solid var(--primary);
+}
+
+.cta-box-secondary {
+  background: radial-gradient(100% 100% at 100% 100%, rgba(30, 58, 138, 0.03) 0%, rgba(255, 255, 255, 0) 100%), var(--bg-primary);
+  border-left: 5px solid var(--secondary);
+}
+
+.cta-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--neutral-900);
+}
+
+.cta-desc {
+  font-size: 15px;
+  color: var(--neutral-500);
+  margin-bottom: 12px;
+}
+
+/* Reviews slider */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.review-preview-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.review-quote {
+  font-size: 14px;
+  font-style: italic;
+  color: var(--neutral-600);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.review-quote::before {
+  content: '“';
+  font-size: 40px;
+  color: var(--primary-light);
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  z-index: -1;
+  font-family: Georgia, serif;
+}
+
+.review-user-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.review-author {
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--neutral-800);
+}
+
+.review-college-tag {
+  font-size: 11px;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+/* Accordion FAQ */
+.faq-list {
+  max-width: 750px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: var(--transition-smooth);
+}
+
+.faq-item.open {
+  border-color: rgba(79, 70, 229, 0.3);
+  box-shadow: var(--shadow-md);
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--neutral-900);
+  transition: var(--transition-fast);
+}
+
+.faq-question:hover {
+  background: var(--neutral-50);
+}
+
+.faq-icon {
+  color: var(--neutral-400);
+  transition: transform 0.25s ease;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(180deg);
+  color: var(--primary);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.16, 1, 0.3, 1), padding 0.3s ease;
+  background: var(--bg-primary);
+  padding: 0 24px;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 200px;
+  padding: 0 24px 20px;
+}
+
+.faq-answer p {
+  font-size: 14px;
+  color: var(--neutral-600);
+  border-top: 1px solid var(--neutral-100);
+  padding-top: 16px;
+}
+
+/* Responsive Overrides */
+@media (max-width: 992px) {
+  .hero-headline {
+    font-size: 40px;
+  }
+
+  .featured-grid, .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .streams-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cta-split-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .featured-grid, .reviews-grid, .streams-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-section {
+    padding: 60px 0 40px;
+  }
+
+  .hero-headline {
+    font-size: 32px;
+  }
+
+  .cta-box {
+    padding: 24px;
+  }
+}

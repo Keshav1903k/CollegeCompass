@@ -1,0 +1,317 @@
+/* Compare Colleges Styling */
+.compare-page {
+  padding: 40px 0 60px;
+}
+
+.compare-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+/* College Selector Bar */
+.selector-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 100;
+}
+
+.selector-dropdown-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.compare-search-input {
+  width: 100%;
+  padding: 12px 16px 12px 40px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  background: var(--bg-primary);
+  font-size: 14.5px;
+  transition: var(--transition-smooth);
+}
+
+.compare-search-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px var(--primary-glow);
+}
+
+.search-icon-absolute {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--neutral-400);
+  pointer-events: none;
+}
+
+.dropdown-results-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  margin-top: 8px;
+  box-shadow: var(--shadow-xl);
+  max-height: 250px;
+  overflow-y: auto;
+  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0;
+}
+
+.dropdown-result-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  text-align: left;
+}
+
+.dropdown-result-item:hover {
+  background: var(--neutral-50);
+}
+
+.dropdown-item-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+}
+
+.dropdown-item-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dropdown-item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-item-name {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--neutral-900);
+}
+
+.dropdown-item-meta {
+  font-size: 11px;
+  color: var(--neutral-500);
+}
+
+/* Comparison Grid/Table Container */
+.compare-matrix-container {
+  overflow-x: auto;
+}
+
+.compare-matrix {
+  display: grid;
+  grid-template-columns: 240px repeat(auto-fit, minmax(260px, 1fr));
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  min-width: 800px;
+  overflow: hidden;
+}
+
+/* Column division */
+.compare-col {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--border-light);
+}
+
+.compare-col:last-child {
+  border-right: none;
+}
+
+.compare-label-col {
+  background: var(--bg-secondary);
+  font-weight: 600;
+  color: var(--neutral-600);
+}
+
+/* Row divisions */
+.compare-row {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  font-size: 14.5px;
+  min-height: 80px;
+}
+
+.compare-row:last-child {
+  border-bottom: none;
+}
+
+.compare-row-header {
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 32px 20px;
+  position: relative;
+}
+
+.compare-row-header-label {
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--neutral-700);
+}
+
+/* Header Content styles */
+.compare-header-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  overflow: hidden;
+  margin-bottom: 14px;
+  box-shadow: var(--shadow-sm);
+}
+
+.compare-header-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.compare-header-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--neutral-900);
+  line-height: 1.35;
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.remove-col-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: var(--neutral-400);
+  transition: var(--transition-fast);
+  cursor: pointer;
+}
+
+.remove-col-btn:hover {
+  color: var(--danger);
+}
+
+/* Best Value Highlight Badge */
+.best-value-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--success);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.best-value-highlight {
+  background: radial-gradient(100% 100% at 50% 0%, rgba(13, 148, 136, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
+  border-left: 2px solid var(--success);
+  border-right: 2px solid var(--success);
+}
+
+/* Empty State compare */
+.compare-empty-state {
+  text-align: center;
+  padding: 80px 24px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Table detail lists (e.g. facilities tags in columns) */
+.compare-tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+
+.compare-tag-bubble {
+  background: var(--neutral-100);
+  color: var(--neutral-600);
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+}
+
+.best-value-highlight .compare-tag-bubble {
+  background: var(--success-border);
+  color: var(--success);
+}
+
+/* Responsive stacks */
+@media (max-width: 768px) {
+  .compare-matrix-container {
+    overflow-x: visible;
+  }
+
+  .compare-matrix {
+    min-width: 100%;
+    grid-template-columns: 1fr !important;
+  }
+
+  .compare-label-col {
+    display: none; /* Hide labels column, insert in-line headers in cells */
+  }
+
+  .compare-col {
+    border-right: none;
+    border-bottom: 24px solid var(--neutral-100);
+  }
+
+  .compare-col:last-child {
+    border-bottom: none;
+  }
+
+  .compare-row {
+    justify-content: space-between;
+    min-height: auto;
+  }
+
+  .compare-row::before {
+    content: attr(data-label);
+    font-weight: 700;
+    color: var(--neutral-500);
+    margin-right: 16px;
+    font-size: 13.5px;
+  }
+}

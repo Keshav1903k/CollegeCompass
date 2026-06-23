@@ -1,0 +1,393 @@
+.explore-page {
+  padding: 40px 0 60px;
+}
+
+.explore-container {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* Sidebar Filters */
+.filter-sidebar {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: calc(var(--navbar-height) + 24px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 14px;
+}
+
+.filter-title-text {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--neutral-900);
+}
+
+.clear-btn {
+  font-size: 13px;
+  color: var(--primary);
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+
+.clear-btn:hover {
+  color: var(--primary-hover);
+}
+
+.filter-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.filter-section-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--neutral-800);
+}
+
+/* Options Styles */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  color: var(--neutral-600);
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-input {
+  width: 16px;
+  height: 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+  cursor: pointer;
+}
+
+.checkbox-input:checked {
+  accent-color: var(--primary);
+}
+
+.range-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.range-slider {
+  width: 100%;
+  accent-color: var(--primary);
+}
+
+.range-values {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--neutral-500);
+  font-weight: 600;
+}
+
+.rating-buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.rating-filter-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px 4px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--neutral-700);
+  transition: var(--transition-fast);
+}
+
+.rating-filter-btn:hover {
+  border-color: var(--primary);
+  background: var(--neutral-50);
+}
+
+.rating-filter-btn.active {
+  border-color: var(--primary);
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+/* Listing Column */
+.listing-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Search and Sort Toolbar */
+.explore-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.toolbar-search {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 8px 12px;
+  gap: 8px;
+  background: var(--neutral-50);
+  transition: var(--transition-fast);
+}
+
+.toolbar-search:focus-within {
+  background: var(--bg-primary);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-glow);
+}
+
+.toolbar-search-input {
+  width: 100%;
+  font-size: 14px;
+  color: var(--neutral-800);
+}
+
+.toolbar-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.results-count {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--neutral-600);
+}
+
+.results-count span {
+  font-weight: 700;
+  color: var(--neutral-900);
+}
+
+.sort-select-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--neutral-600);
+}
+
+.sort-select {
+  padding: 6px 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  background: var(--bg-primary);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--neutral-800);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.sort-select:hover {
+  border-color: var(--border-focus);
+}
+
+/* Card layout variants (explore cards vs featured cards) */
+.colleges-listing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+/* Skeleton Loading styles */
+.skeleton-card {
+  height: 380px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.skeleton-banner {
+  height: 150px;
+}
+
+.skeleton-content {
+  padding: 24px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.skeleton-title {
+  height: 24px;
+  width: 80%;
+}
+
+.skeleton-line {
+  height: 14px;
+  width: 40%;
+}
+
+.skeleton-stats {
+  height: 60px;
+}
+
+.skeleton-actions {
+  height: 36px;
+  margin-top: auto;
+}
+
+/* Empty State Card */
+.empty-state {
+  text-align: center;
+  padding: 64px 32px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 500px;
+  margin: 40px auto;
+}
+
+.empty-state-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-full);
+  background: var(--primary-light);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-state-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--neutral-900);
+}
+
+.empty-state-desc {
+  font-size: 14px;
+  color: var(--neutral-500);
+  line-height: 1.5;
+}
+
+/* Pagination */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.page-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  background: var(--bg-primary);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--neutral-700);
+  transition: var(--transition-fast);
+}
+
+.page-btn:hover {
+  background: var(--neutral-50);
+  border-color: var(--border-focus);
+}
+
+.page-btn.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: var(--bg-secondary) !important;
+}
+
+/* Mobile Sidebar Drawer Button */
+.mobile-filter-toggle {
+  display: none;
+}
+
+/* Responsive Overrides */
+@media (max-width: 900px) {
+  .explore-container {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-sidebar {
+    display: none; /* Hide default sidebar on mobile */
+  }
+
+  /* Make filter drawer show up on action */
+  .filter-sidebar.mobile-visible {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2000;
+    border-radius: 0;
+    overflow-y: auto;
+  }
+
+  .mobile-filter-toggle {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 600px) {
+  .colleges-listing-grid {
+    grid-template-columns: 1fr;
+  }
+}

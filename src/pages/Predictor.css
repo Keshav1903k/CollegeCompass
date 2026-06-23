@@ -1,0 +1,192 @@
+/* Predictor Tool CSS */
+.predictor-page {
+  padding: 40px 0 60px;
+}
+
+.predictor-grid {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* Form Panel */
+.predictor-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: 32px 24px;
+  box-shadow: var(--shadow-md);
+}
+
+.predictor-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.predictor-subtitle {
+  font-size: 13.5px;
+  color: var(--neutral-500);
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.predictor-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Results Section */
+.predictor-results-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.results-heading {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--neutral-900);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.prediction-item-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  transition: var(--transition-smooth);
+}
+
+.prediction-item-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(79, 70, 229, 0.15);
+}
+
+.prediction-college-info {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex: 1;
+}
+
+.prediction-college-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.prediction-college-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prediction-college-details h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: 4px;
+}
+
+.prediction-college-details p {
+  font-size: 13px;
+  color: var(--neutral-500);
+}
+
+/* Score displays */
+.prediction-metrics {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.match-score-badge {
+  text-align: center;
+}
+
+.match-score-val {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.match-score-lbl {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: var(--neutral-400);
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* Predictor Loaders */
+.prediction-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 24px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  gap: 20px;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid var(--primary-light);
+  border-top-color: var(--primary);
+  border-radius: var(--radius-full);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.prediction-loader-text {
+  font-weight: 600;
+  color: var(--neutral-600);
+}
+
+/* Responsive columns */
+@media (max-width: 900px) {
+  .predictor-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .prediction-item-card {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .prediction-college-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .prediction-metrics {
+    justify-content: space-around;
+  }
+}
